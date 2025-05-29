@@ -1,0 +1,15 @@
+com\www\elReyDelPollo\model\dto\VentaDto.class
+com\www\elReyDelPollo\configuration\SecurityConfig.class
+com\www\elReyDelPollo\controller\VentaController.class
+com\www\elReyDelPollo\ElReyDelPolloApplication.class
+com\www\elReyDelPollo\model\VentaDetalle.class
+com\www\elReyDelPollo\component\JwtFilter.class
+com\www\elReyDelPollo\repository\VentaRepo.class
+com\www\elReyDelPollo\model\enums\Naturaleza.class
+com\www\elReyDelPollo\model\Venta.class
+com\www\elReyDelPollo\component\JwtUtil.class
+com\www\elReyDelPollo\service\VentaService.class
+com\www\elReyDelPollo\model\Usuario.class
+com\www\elReyDelPollo\controller\AuthController.class
+com\www\elReyDelPollo\repository\UserRepository.class
+com\www\elReyDelPollo\model\dto\VentaDetalleDto.class
