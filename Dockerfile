@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copiamos el archivo jar al contenedor
-COPY elReyDelPollo-0.0.1-SNAPSHOT.jar app.jar
+COPY target/elReyDelPollo-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponemos el puerto que usa Spring Boot (por defecto es el 8080)
 EXPOSE 8080
