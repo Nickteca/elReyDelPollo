@@ -26,7 +26,7 @@ public class Venta{
     private boolean status;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 10)
     private Naturaleza naturalezaVenta;
 
     // @Max(value=?) @Min(value=?)//if you know range of your decimal fields
