@@ -1,14 +1,12 @@
-# Imagen base con Java
-FROM openjdk:17-jdk-slim
-
-# Directorio de trabajo dentro del contenedor
+# Etapa 1: Construcción del JAR
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copiamos el archivo jar al contenedor
-COPY target/elReyDelPollo-0.0.1-SNAPSHOT.jar app.jar
-
-# Exponemos el puerto que usa Spring Boot (por defecto es el 8080)
+# Etapa 2: Imagen final
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/elReyDelPollo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-
-# Comando para ejecutar el JAR
 ENTRYPOINT ["java", "-jar", "app.jar"]
